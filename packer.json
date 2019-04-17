@@ -11,7 +11,7 @@
         "instance_type": "t2.micro",
         "region": "ap-southeast-2",
         "ssh_username": "ec2-user",
-        "ami_name": "AWSLNX2-MyDemo1-01",
+        "ami_name": "AWSLNX2-WP-for-Blog-01",
         "source_ami_filter": {
           "filters": {
             "virtualization-type": "hvm",
@@ -34,6 +34,13 @@
            "sudo chmod +x ~/web01/script.sh",
            "sudo ~/web01/script.sh"
                   ]
-    }]
+    }],
+
+    "post-processors": [{
+      "type": "manifest",
+      "output": "manifest.json",
+      "strip_path": true
+}]
+
   }
 
